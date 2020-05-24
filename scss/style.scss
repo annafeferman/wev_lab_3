@@ -1,0 +1,167 @@
+@import "mixin";
+@import "variables";
+
+*{
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: Arial;
+    margin: 0 0 2px;
+  }
+
+  body {
+    .wrap{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+  }
+
+  .main_wrap{
+      flex: $variable1;
+  }
+  .footer{
+      flex: $variable2;
+  }
+  
+  .asd{
+      color: red;
+  }
+  
+  header,footer{
+      background-color: #093d1d9f;
+      padding: $variable3;
+  }
+
+header {
+  color: white;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  text-shadow: rgba(0, 0, 0, .5) 3px 3px 3px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h2 {
+    p {
+    font-style: italic;
+    }
+}
+
+h2{
+    border-bottom: 1px solid darkslategray;
+    margin: 0 20px 0 20px;
+    padding-top: 10px;
+    display: flex;
+    @include justify-content (center);
+}
+a {
+    @include color(black);
+}
+p {
+    font-size: 15px;
+    padding: 0 10px 10px 10px;
+    text-align: justify;
+}
+p::first-letter {
+    font-family: 'Gill Sans';
+    font-size: 25px;
+}
+
+main {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 8px;
+  }
+  
+  .main__col.menu{
+      flex: 1 1 100%;
+      width: 100%;
+  }
+  .main__col{
+      flex: 1 0 50%;
+      padding: 10px;
+      border: 1px solid black;
+      border-radius: 14px;
+  }
+  
+  .main__col:nth-child(1){
+      background-color: rgba(92, 219, 109, 0.336);
+  }
+  
+  .main__col:nth-child(2){
+      background-color: rgba(35, 216, 186, 0.281);
+  }
+  
+  .main__col:nth-child(3){
+      background-color: rgba(253, 183, 181, 0.233);
+  }
+  
+  .flex__example{
+      display: flex;
+  }
+  .sq{
+      width: 50px;
+      height: 50px;
+  }
+  
+  .sq:nth-child(1){
+      background-color: cadetblue;
+  }
+  
+  .sq:nth-child(2){
+      background-color: wheat;
+  }
+  
+  .sq:nth-child(3){
+      background-color: sienna;
+  }
+
+  @media (max-width:768px){
+      .main__col:nth-child(1){
+          background-color: rgb(255, 231, 231);
+      }
+      
+      .main__col:nth-child(2){
+          background-color: rgb(212, 230, 187);
+      }
+      
+      .main__col:nth-child(3){
+          background-color: rgba(191, 227, 241, 0.658);
+      }
+  }
+  
+  @media (max-width:375px){
+      .asd{
+          @include color(black);
+      }
+      .main__col{
+          flex: 1 0 100%;
+      }
+  }
+
+  .flex__example {
+      justify-content: center;
+      width: 100%;
+  }
+
+  table {
+      font-style: italic;
+      font-size: 15px;
+      border-collapse: separate;
+      border-spacing: 5px;
+      background-color: rgba(27, 83, 29, 0.527);
+      border: 1px solid black;
+      border-radius: 10px;
+      margin-top: 27px;
+  }
+
+  table{
+      td {
+      background: rgb(255, 233, 233);
+      padding: 10px;
+  }
+}

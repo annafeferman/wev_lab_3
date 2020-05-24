@@ -1,0 +1,7 @@
+@mixin color($abcd) {
+    color: black;
+}
+
+@mixin justify-content ($just-cont) {
+    justify-content: center;    
+}
